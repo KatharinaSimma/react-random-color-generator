@@ -101,6 +101,7 @@ function App() {
           textAlign: 'center',
           verticalAlign: 'center',
           backgroundColor: color,
+          transition: 'background-color 2s ease-out',
         }}
       >
         <span style={{ color: color, filter: 'invert(100%)' }}>
