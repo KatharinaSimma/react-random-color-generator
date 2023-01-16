@@ -25,8 +25,8 @@ function App() {
       hue: hue,
     }),
   );
-  console.log(hue, luminosity);
-  console.log(color);
+  const [width, setWidth] = useState(20);
+  const [height, setHeight] = useState(20);
 
   return (
     <>
@@ -35,7 +35,11 @@ function App() {
       <h2>Choose your hue</h2>
       {hues.map((h) => {
         return (
-          <button key={h} onClick={() => setHue(h)}>
+          <button
+            key={h}
+            onClick={() => setHue(h)}
+            css={{ backgroundColor: h, border: 'none' }}
+          >
             {h}
           </button>
         );
@@ -61,10 +65,39 @@ function App() {
       >
         Generate
       </button>
+      <div>
+        <h2>Style your box!</h2>
+        Width:
+        <input
+          onChange={(event) => {
+            setWidth(event.currentTarget.value);
+          }}
+          type="number"
+          id="width"
+          name="width"
+          min="20"
+          max="100"
+          value={width}
+        />
+        Height:
+        <input
+          onChange={(event) => {
+            setHeight(event.currentTarget.value);
+          }}
+          type="number"
+          id="height"
+          name="height"
+          min="20"
+          max="60"
+          value={height}
+        />
+      </div>
       <div
         style={{
-          height: '100px',
-          width: '200px',
+          height: height + 'vh',
+          width: width + 'vw',
+          maxHeight: '60vh',
+          maxWidth: '100vw',
           textAlign: 'center',
           verticalAlign: 'center',
           backgroundColor: color,
