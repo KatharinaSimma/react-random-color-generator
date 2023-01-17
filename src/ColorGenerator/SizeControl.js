@@ -10,13 +10,17 @@ const inputStyle = css`
   &:focus {
     border-color: #c5c5ce;
   }
+  font-size: 1.4em;
+`;
+const labelStyle = css`
+  font-size: 1.4em;
 `;
 
 export default function SizeControl(props) {
   return (
     <div>
-      <p>Style your box!</p>
-      Width:
+      <h2>Style your box!</h2>
+      <span css={labelStyle}>Width:</span>
       <input
         onChange={(event) => {
           props.setWidth(event.currentTarget.value);
@@ -29,7 +33,7 @@ export default function SizeControl(props) {
         value={props.width}
         css={inputStyle}
       />
-      Height:
+      <span css={labelStyle}>Height:</span>
       <input
         onChange={(event) => {
           props.setHeight(event.currentTarget.value);

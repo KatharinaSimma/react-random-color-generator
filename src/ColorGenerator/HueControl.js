@@ -21,6 +21,7 @@ const buttonStyle = (hue, activeColor) => css`
   color: ${hue};
   border: 3px solid grey;
   border-color: ${activeColor === hue ? '#c5c5ce' : 'none'};
+  font-size: 1.4em;
 `;
 
 const hueControlStyle = css`
@@ -33,7 +34,7 @@ const hueControlStyle = css`
 export default function HueControl(props) {
   return (
     <div>
-      <p>Choose your hue</p>
+      <h2>Choose your hue</h2>
       <div css={hueControlStyle}>
         {hues.map((h) => {
           return (

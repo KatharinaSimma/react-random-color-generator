@@ -23,8 +23,8 @@ const lineStyle = (color) => css`
 function RandomColorGenerator() {
   const [hue, setHue] = useState('random');
   const [luminosity, setLuminosity] = useState('random');
-  const [width, setWidth] = useState(20);
-  const [height, setHeight] = useState(20);
+  const [width, setWidth] = useState(50);
+  const [height, setHeight] = useState(30);
   const [color, setColor] = useState(
     randomColor({
       luminosity: luminosity,

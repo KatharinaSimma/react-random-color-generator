@@ -4,10 +4,11 @@ import randomColor from 'randomcolor';
 
 const buttonStyle = css`
   background-color: grey;
-  margin-top: 2em;
-  padding: 0.5em 1em;
+  margin-top: 1em;
+  padding: 0.5em 1.5em;
   border-radius: 0.3em;
   border: 3px solid #c5c5ce;
+  font-size: 2em;
 `;
 
 export default function GenerateButton(props) {
