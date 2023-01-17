@@ -1,9 +1,19 @@
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
 import randomColor from 'randomcolor';
 
+const buttonStyle = css`
+  background-color: grey;
+  margin-top: 2em;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  border: 3px solid #c5c5ce;
+`;
+
 export default function GenerateButton(props) {
-  console.log('Generate', props.hue, props.luminosity);
   return (
     <button
+      css={buttonStyle}
       onClick={() => {
         props.setColor(
           randomColor({

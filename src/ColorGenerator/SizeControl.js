@@ -1,7 +1,21 @@
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
+
+const inputStyle = css`
+  background-color: grey;
+  border: 3px solid grey;
+  border-radius: 0.3em;
+  margin: 0.2em;
+  padding: 0.2em 0.5em;
+  &:focus {
+    border-color: #c5c5ce;
+  }
+`;
+
 export default function SizeControl(props) {
   return (
     <div>
-      <h2>Style your box!</h2>
+      <p>Style your box!</p>
       Width:
       <input
         onChange={(event) => {
@@ -13,6 +27,7 @@ export default function SizeControl(props) {
         min="20"
         max="100"
         value={props.width}
+        css={inputStyle}
       />
       Height:
       <input
@@ -25,6 +40,7 @@ export default function SizeControl(props) {
         min="20"
         max="60"
         value={props.height}
+        css={inputStyle}
       />
     </div>
   );
