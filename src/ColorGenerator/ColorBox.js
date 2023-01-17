@@ -1,12 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import { Resizable } from 're-resizable';
 
-const boxStyle = (height, width, color, invertedColor) => css`
-  height: ${height}vh;
-  width: ${width}vw;
-  max-height: 60vh;
-  max-width: 100vw;
-  margin: 2em auto 0 auto;
+const boxStyle = (color, invertedColor) => css`
+  height: 100%;
+  width: 100%;
+  margin: 0;
   display: flex-center;
   justify-content: flex-center;
   align-items: center;
@@ -17,6 +16,10 @@ const boxStyle = (height, width, color, invertedColor) => css`
   color: ${invertedColor};
 `;
 
+const resizeStyle = css`
+  margin: 2em auto;
+`;
+
 // get inverted color
 // adapted from https://jsfiddle.net/salman/f9Re3/
 export default function ColorBox(props) {
@@ -25,8 +28,20 @@ export default function ColorBox(props) {
   invertedColor = '#' + invertedColor.toString(16).padStart(6, 0);
 
   return (
-    <div css={boxStyle(props.height, props.width, props.color, invertedColor)}>
-      Generated Color: {props.color}
-    </div>
+    <Resizable
+      defaultSize={{
+        width: 700,
+        height: 200,
+      }}
+      maxWidth="100vw"
+      maxHeight="50vw"
+      minWidth="30%"
+      minHeight="100px"
+      css={resizeStyle}
+    >
+      <div css={boxStyle(props.color, invertedColor)}>
+        Generated Color: {props.color}
+      </div>
+    </Resizable>
   );
 }

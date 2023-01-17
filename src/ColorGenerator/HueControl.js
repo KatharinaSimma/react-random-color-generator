@@ -14,19 +14,18 @@ const hues = [
 ];
 
 const buttonStyle = (hue, activeColor) => css`
-  background-color: transparent;
-  color: #c5c5ce;
+  background-color: ${activeColor === hue ? '#c5c5ce' : 'transparent'};
+  color: ${activeColor === hue ? '#27272c;' : '#c5c5ce'};
   margin: 0.2em;
-  padding: 0.1em 0.5em;
+  padding: 0.4em 0.5em;
   border-radius: 0.3em;
   border: 1px solid #c5c5ce;
-  border-width: ${activeColor === hue ? '3px' : '1px'};
-  font-size: ${activeColor === hue ? '1.5em' : '1em'}; ;
+  font-size: 1.2em;
 `;
 
 const hueControlStyle = css`
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   margin: auto;
 `;
