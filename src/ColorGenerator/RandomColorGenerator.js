@@ -25,6 +25,10 @@ const controlsStyle = css`
   justify-content: center;
 `;
 
+const heading = css`
+  font-size: 3em;
+`;
+
 function RandomColorGenerator() {
   const [hue, setHue] = useState('random');
   const [luminosity, setLuminosity] = useState('random');
@@ -37,7 +41,7 @@ function RandomColorGenerator() {
 
   return (
     <div css={randomColorGeneratorStyle}>
-      <h1>Random Color Generator</h1>
+      <h1 css={heading}>Random Color Generator</h1>
       <p>This is my awesome Color Generator. Try it!</p>
       <hr css={lineStyle(color)} />
 
@@ -49,9 +53,8 @@ function RandomColorGenerator() {
         />
       </div>
 
-      <GenerateButton setColor={setColor} hue={hue} luminosity={luminosity} />
-
       <ColorBox color={color} />
+      <GenerateButton setColor={setColor} hue={hue} luminosity={luminosity} />
     </div>
   );
 }
