@@ -14,6 +14,7 @@ const boxStyle = (height, width, color) => css`
   background-color: ${color};
   transition: background-color 2s ease-out;
   font-size: 1.5em;
+  border-radius: 0.3em;
 `;
 
 const textStyle = (color) => css`

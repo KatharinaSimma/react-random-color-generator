@@ -2,13 +2,14 @@
 import { css } from '@emotion/react';
 
 const inputStyle = css`
-  background-color: grey;
-  border: 3px solid grey;
+  background-color: transparent;
+  border: 1px solid #c5c5ce;
+  color: #c5c5ce;
   border-radius: 0.3em;
   margin: 0.2em;
   padding: 0.2em 0.5em;
   &:focus {
-    border-color: #c5c5ce;
+    border: 2px solid #c5c5ce;
   }
   font-size: 1.4em;
 `;

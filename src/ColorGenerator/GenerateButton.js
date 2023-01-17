@@ -3,7 +3,8 @@ import { css } from '@emotion/react';
 import randomColor from 'randomcolor';
 
 const buttonStyle = css`
-  background-color: grey;
+  background-color: transparent;
+  color: #c5c5ce;
   margin-top: 1em;
   padding: 0.5em 1.5em;
   border-radius: 0.3em;

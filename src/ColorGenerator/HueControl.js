@@ -14,14 +14,14 @@ const hues = [
 ];
 
 const buttonStyle = (hue, activeColor) => css`
-  background-color: grey;
+  background-color: transparent;
+  color: #c5c5ce;
   margin: 0.2em;
-  padding: 0.2em 0.5em;
+  padding: 0.1em 0.5em;
   border-radius: 0.3em;
-  color: ${hue};
-  border: 3px solid grey;
-  border-color: ${activeColor === hue ? '#c5c5ce' : 'none'};
-  font-size: 1.4em;
+  border: 1px solid #c5c5ce;
+  border-width: ${activeColor === hue ? '3px' : '1px'};
+  font-size: ${activeColor === hue ? '1.5em' : '1em'}; ;
 `;
 
 const hueControlStyle = css`
