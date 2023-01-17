@@ -43,6 +43,7 @@ function RandomColorGenerator() {
     <div css={randomColorGeneratorStyle}>
       <h1 css={heading}>Random Color Generator</h1>
       <p>This is my awesome Color Generator. Try it!</p>
+
       <hr css={lineStyle(color)} />
 
       <div css={controlsStyle}>
@@ -53,8 +54,9 @@ function RandomColorGenerator() {
         />
       </div>
 
-      <ColorBox color={color} />
       <GenerateButton setColor={setColor} hue={hue} luminosity={luminosity} />
+
+      <ColorBox color={color} />
     </div>
   );
 }
