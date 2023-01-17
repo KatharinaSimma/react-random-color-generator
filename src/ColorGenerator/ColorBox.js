@@ -7,7 +7,6 @@ const boxStyle = (height, width, color) => css`
   max-height: 60vh;
   max-width: 100vw;
   margin: 2em auto 0 auto;
-  padding: -1;
   display: flex-center;
   justify-content: flex-center;
   align-items: center;
@@ -21,12 +20,14 @@ const textStyle = (color) => css`
   color: ${color};
   filter: invert(100%);
   transition: all 2s ease-out;
+  display: inline;
 `;
 
 export default function ColorBox(props) {
   return (
     <div css={boxStyle(props.height, props.width, props.color)}>
-      <span css={textStyle(props.color)}>Generated Color: {props.color}</span>
+      {/* Generated Color: {props.color} */}
+      <div css={textStyle(props.color)}>Generated Color: {props.color}</div>
     </div>
   );
 }
