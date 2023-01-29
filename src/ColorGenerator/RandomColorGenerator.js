@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-/** @jsxImportSource @emotion/react */
 import randomColor from 'randomcolor';
 import { useState } from 'react';
 import ColorBox from './ColorBox';
