@@ -35,14 +35,14 @@ export default function HueControl(props) {
     <div>
       <h2>Choose your hue</h2>
       <div css={hueControlStyle}>
-        {hues.map((h) => {
+        {hues.map((hue) => {
           return (
             <button
-              css={buttonStyle(h, props.hue)}
-              key={h}
-              onClick={() => props.setHue(h)}
+              css={buttonStyle(hue, props.hue)}
+              key={hue}
+              onClick={() => props.setHue(hue)}
             >
-              {h}
+              {hue}
             </button>
           );
         })}
